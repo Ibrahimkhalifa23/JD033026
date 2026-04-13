@@ -5,3 +5,6 @@ public class AtmMachine {
         this.machineId = machineId;
     }
 }
+
+
+

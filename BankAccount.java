@@ -2,7 +2,7 @@
 
 import java.math.BigDecimal;
 
-public class BankAccount {
+public abstract class BankAccount {
     private String accountNumber;
     private BigDecimal balance;
     private boolean isActive;
@@ -10,8 +10,9 @@ public class BankAccount {
     public BankAccount(BigDecimal balance, String accountNumber, boolean isActive) {
         this.balance = balance;
         this.accountNumber = accountNumber;
-        this.isActive = isActive;
-    }
+        this.isActive = isActive;}
+
+        public abstract void applyMonthlyFee();
 
     public void deposit(BigDecimal amount){
         if (amount.compareTo(BigDecimal.Zero)< 0){
